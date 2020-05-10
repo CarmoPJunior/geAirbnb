@@ -1,5 +1,6 @@
 # geAirbnb
-Desafio Gama Experience - Página de Notícias sobre o COVID-19
+
+Desafio Gama Experience - Quartos do Airbnb
 
 Objetivo:Criar página dos Quartos do Airbnb.
 
