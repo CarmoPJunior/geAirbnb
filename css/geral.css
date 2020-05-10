@@ -1,0 +1,286 @@
+* {
+    margin:         0;
+    padding:        0;
+    outline:        0;
+    box-sizing:     border-box;
+}
+
+body {
+    font:           400 14px Roboto, sans-serif;
+    /* background:     #f0f0f5; */
+    background-color: #fff;
+}
+
+/* Style header */
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: #563d7c;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 2px !important;
+    padding: 10px;
+    width: 100% ;
+    z-index: 100 !important;
+    position: fixed;
+    top: 0px !important;
+    background: rgb(255, 255, 255);
+    transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.65, 1) 0s !important;
+}
+
+nav {
+    display: flex;
+    /* flex-direction: row; */
+    background: transparent;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+}
+
+nav > a{
+    display: inline-block;
+}
+nav div  {
+    padding-left: 20px;
+    display: grid;    
+    align-content: center;
+}
+
+nav div ul {    
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+nav div ul > li .nav-link {   
+    padding-right: .7rem;
+    padding-left: .7rem; 
+    color: #FF385C ;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 16px !important;
+}
+
+/* Container for flexboxes */
+
+section {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    /* background-color: #f1f1f1; */
+    padding: 40px;
+    margin-top: 10px;
+}
+
+
+/* painel de pesquisa */
+section.painel-pesquisa{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.div-pesquisa {
+    -webkit-box-align: center !important;
+    align-items: center !important;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 2px !important;
+    display: inline-flex !important;
+    height: 48px !important;
+    max-width: 100% !important;
+    min-width: 260px !important;
+    position: relative !important;
+    vertical-align: middle !important;
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(34, 34, 34) !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-image: initial !important;
+    border-radius: 12px !important;
+    transition: box-shadow 0.2s ease 0s !important;
+    border-color: rgb(247, 247, 247) !important;
+}
+
+.div-pesquisa-btn-input {
+    -webkit-appearance: none !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    font-family: inherit !important;
+    user-select: auto !important;
+    height: 100% !important;
+    position: relative !important;
+    z-index: 2 !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    text-align: center !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    font-weight: 400 !important;
+    color: rgb(113, 113, 113) !important;
+    background: transparent !important;
+    border-width: 0px !important;
+    border-style: initial !important;
+    border-color: initial !important;
+    border-image: initial !important;
+    margin: 0px !important;
+    outline: none !important;
+    padding: 0px 16px !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    flex: 1 1 auto !important;
+    overflow: hidden !important;
+}
+
+.div-pesquisa-btn-input-label {
+    font-size: 10px !important;
+    line-height: 12px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    padding-bottom: 4px !important;
+}
+
+.div-pesquisa-btn-input-value {
+    font-size: 12px !important;
+    line-height: 18px !important;
+    font-weight: 600 !important;
+    color: rgb(34, 34, 34) !important;
+}
+
+.div-pesquisa-barra-vertical {
+    height: 100% !important;
+    width: 1px !important;
+    position: relative !important;
+    z-index: 1 !important;
+    background-color: rgb(235, 235, 235) !important;
+    flex: 0 0 1px !important;
+}
+
+.div-pesquisa-btn-pesquisa {
+    -webkit-appearance: none !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    text-align: inherit !important;
+    user-select: auto !important;
+    height: 100% !important;
+    position: relative !important;
+    z-index: 2 !important;
+    color: rgb(255, 56, 92) !important;
+    background: transparent !important;
+    border-width: 0px !important;
+    border-style: initial !important;
+    border-color: initial !important;
+    border-image: initial !important;
+    margin: 0px !important;
+    outline: none !important;
+    overflow: visible !important;
+    padding: 0px 19px !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    flex: 0 0 auto !important;
+}
+
+
+
+/* painel de hospedagens */
+.painel-hospedagens {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-evenly;
+    grid-gap: 50px;
+    padding: 10px;    
+}
+
+/* card */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+}
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card img{
+    height: 150px;
+    box-shadow: 0 1px 0px 0 rgba(0,0,0,0.2);
+}
+  
+img {
+    border-radius: 5px 5px 0 0;        
+}
+  
+.card-container {
+    padding: 10px 16px;
+}
+
+.card .card-container h4{
+    margin-top: 5px;
+    text-align: justify;
+}
+
+.card .card-container p{
+    margin-top: 5px;
+    text-align: justify;
+}
+
+.tipo-propriedade{
+    color: rgb(113, 113, 113) !important;
+}
+
+.card .card-container .preco-diaria{
+    font-size: 16px !important;
+    line-height: 24px !important;   
+    text-align: right;
+}
+
+.card .card-container .preco-diaria span{    
+    font-weight: 800 !important;
+}
+
+.card .card-container .total-diarias{
+    color: rgb(113, 113, 113) !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    text-align: right;
+}
+
+
+/* Style the footer */
+footer {
+    border-top: 1px solid #DDDDDD;
+    background-color: rgb(247, 247, 247);
+    padding: 20px 20px 50px;
+    text-align: center;    
+}
+
+.midias-socias{
+    display: flex;
+    justify-content: center;
+    padding: 10px ;
+}
+
+.midias-socias > div {    
+    margin: 10px;
+    text-align: center;    
+  }
+
+.midias-socias > div a{
+    font-weight: 600;
+    color: #495057;
+    text-decoration: none;
+}
+  
+.text-autor{
+    color: #6c757d;
+}
