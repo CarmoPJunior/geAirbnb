@@ -1,31 +1,3 @@
-
-function makeRequest(method, url) {
-  return new Promise(function(resolve, reject) {
-    let xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.onload = function() {
-      if (this.status >= 200 && this.status < 300) {
-
-        let dados = JSON.parse(xhr.responseText);
-        resolve(dados);
-      } else {
-        reject({
-          status: this.status,
-          statusText: xhr.statusText
-        });
-      }
-    };
-    xhr.onerror = function() {
-      reject({
-        status: this.status,
-        statusText: xhr.statusText
-      });
-    };
-    xhr.send();
-  });
-}
-
-
 function request(method, url)  {
   return new Promise(function(resolve, reject) {
     const xhr = new XMLHttpRequest();
@@ -61,21 +33,6 @@ async function carregarHospedagens() {
   });
 }
 
-//carregarHospedagens();
-
-function loadDoc(){
-  carregarHospedagens();
-}
-
-// https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Como_configurar_um_servidor_de_testes_local
-
-// # Se a versão do Python retornada acima for 3.X
-// python3 -m http.server
-// # No windows, tente "python" em vez de "python3"
-// # Se a versão do Python retornada acima for 2.X
-// python -m SimpleHTTPServer
-
-
 function inserirCard(hospedagem){
 
   let out = `<div class="card">
@@ -86,7 +43,7 @@ function inserirCard(hospedagem){
                 <p class="preco-diaria">
                   <span>${formatMoeda(hospedagem.price)}</span>/diária
                 </p>
-                <p class="total-diarias">Total de R$ 1.963</p>                  
+                <p class="total-diarias">Total de 1 diária ${formatMoeda(hospedagem.price)}</p>                  
               </div>
             </div>`;
 
@@ -103,4 +60,8 @@ function formatMoeda(valor){
 }
 
 
+carregarHospedagens();
 
+// function loadDoc(){
+//   carregarHospedagens();
+// }

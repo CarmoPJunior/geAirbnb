@@ -43,6 +43,9 @@ nav div  {
     padding-left: 20px;
     display: grid;    
     align-content: center;
+    width: 100%;
+    display: flexbox;
+    justify-content: center;
 }
 
 nav div ul {    
@@ -61,6 +64,8 @@ nav div ul > li .nav-link {
     text-decoration: none;
     font-weight: 800;
     font-size: 16px !important;
+    width: 100%;
+
 }
 
 /* Container for flexboxes */
@@ -90,7 +95,7 @@ section.painel-pesquisa{
     display: inline-flex !important;
     height: 48px !important;
     max-width: 100% !important;
-    min-width: 260px !important;
+    min-width: 300px !important;
     position: relative !important;
     vertical-align: middle !important;
     background-color: rgb(255, 255, 255) !important;
@@ -164,7 +169,7 @@ section.painel-pesquisa{
     display: inline-block !important;
     font-family: inherit !important;
     font-size: inherit !important;
-    font-weight: inherit !important;
+    font-weight: 800 !important;
     line-height: inherit !important;
     text-align: inherit !important;
     user-select: auto !important;
@@ -186,7 +191,26 @@ section.painel-pesquisa{
     flex: 0 0 auto !important;
 }
 
+.div-pesquisa-txt-input-label {
+    font-size: 10px !important;
+    line-height: 12px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    padding-bottom: 4px !important;
+    padding-top:6px;
+}
 
+.div-pesquisa-txt-input-value{
+    font-size: 12px !important;
+    line-height: 16px !important;
+    font-weight: 600 !important;
+    color: rgb(34, 34, 34) !important;
+    border: 0px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    width: 100% !important;
+}
 
 /* painel de hospedagens */
 .painel-hospedagens {

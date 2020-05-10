@@ -8,8 +8,15 @@
         <title>Desafio Gama Experience - Página de Notícias sobre o COVID-19</title>
 
         <link rel="stylesheet" href="css/geral.css" >
-        <script src="js/index.js"></script>
-
+        <script src="js/index.js"></script>   
+        
+        <!-- Datepicker.css -->
+        <link rel="stylesheet" href="css/datepicker.css">
+        
+        <!-- Datepicker.js -->
+        <script src="js/datepicker.js"></script>
+        
+        
     </head>
 
     <body>
@@ -32,56 +39,45 @@
             </nav>
         </header>
 
-        <section class="painel-pesquisa"> 
+        <!-- <section class="painel-pesquisa"> 
+             <div class="div-pesquisa">
 
-            <div class="div-pesquisa">
-                <button class="div-pesquisa-btn-input" data-index="0" type="button">
-                    <span class="_krjbj">Localização</span>Adicionar local
-                </button>
-                
+                <label class="div-pesquisa-btn-input" for="bigsearch-query-detached-query">
+                    <div class="div-pesquisa-txt-input-label">Check-in</div>
+                    <input type="text" class="div-pesquisa-txt-input-value" id="datepicker" autocomplete="off"></input>               
+                    
+                </label>
+
+                <span class="div-pesquisa-barra-vertical"></span>
+
+                <label class="div-pesquisa-btn-input" for="bigsearch-query-detached-query">
+                    <div class="div-pesquisa-txt-input-label">Checkout</div>
+                    <input type="text" class="div-pesquisa-txt-input-value" id="datepickerCheckOut" autocomplete="off"></input>               
+                </label>
+
                 <span class="div-pesquisa-barra-vertical"></span>
                 
-                <button class="div-pesquisa-btn-input" data-index="1" type="button">   
+                <button class="div-pesquisa-btn-input" data-index="1" type="button" >   
                     <div class="div-pesquisa-btn-input-label">Check-in/Checkout</div>
                     <div class="div-pesquisa-btn-input-value">1 de jun. - 2 de jul.</div>
                 </button>
-              
+                
                 <span class="div-pesquisa-barra-vertical"></span>
 
-                <button class="div-pesquisa-btn-pesquisa" type="button">
+                <button class="div-pesquisa-btn-pesquisa" 
+                        type="button"
+                        onclick="loadDoc();">
                     Buscar
                 </button>
 
             </div>
 
         </section> 
-
-       
-        <button type="button" onclick="loadDoc();">Request data</button>
-
-         
-        <section>        
+          -->
+        <section style="margin-top: 80px;">        
 
             <div id="painel-hospedagens" class="painel-hospedagens">
                 
-                <div class="card">
-
-                    <img src="img/orientações_OMS_COVID_19.png" alt="" style="width:100%">
-
-                    <div class="card-container">
-
-                        <h4>
-                            <b>Room Higienopolis São Paulo</b>
-                        </h4> 
-
-                        <p class="tipo-propriedade">Quarto</p> 
-
-                        <p class="preco-diaria"><span>R$ 80,00</span>/diária</p>
-                        <p class="total-diarias">Total de R$ 1.963</p>  
-
-                    </div>
-                </div>    
-
             </div>
 
         </section>
@@ -103,6 +99,30 @@
             <div class="text-autor">Desenvolvido por C.Júnior - 2020.</div>
             
         </footer>
+
+        <!-- Datepicker initialization -->
+        <!-- <script>
+            const d = new Datepicker(document.getElementById("datepicker"));
+            d.config({
+                firstdate: new Date(2019, 0, 9),
+                lastdate: new Date(2019, 5, 13),
+                disableddays: d => {return(d.getDay() > 0 && d.getDay() < 6)},
+                format: d => {return(months_short[d.getMonth()] + " " + d.getDate())}
+            });
+
+            
+            const datepickerCheckOut = new Datepicker(document.getElementById("datepickerCheckOut"));
+            
+            datepickerCheckOut.config({
+                firstdate: new Date(2019, 0, 9),
+                lastdate: new Date(2019, 5, 13),
+                disableddays: datepickerCheckOut => {return(datepickerCheckOut.getDay() > 0 && datepickerCheckOut.getDay() < 6)},
+                format: datepickerCheckOut => {return(months_short[datepickerCheckOut.getMonth()] + " " + datepickerCheckOut.getDate())}
+            });
+
+
+        </script> -->
+
 
     </body>
 </html>
